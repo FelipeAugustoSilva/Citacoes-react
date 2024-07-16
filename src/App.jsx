@@ -1,4 +1,4 @@
-import Citacao from "./components/Citacao";
+import Citacao from "./components/Citacao.jsx";
 import citacoes from "./data";
 
 import {useState} from 'react';
@@ -12,8 +12,9 @@ function App() {
 
   return (
     <div className="container mt-5">
-      <p>{citacoes[indice].texto}</p>
-     <button className="btn btn-sucess mt-2" onClick={proximaCitacao}>Proxima citação</button>
+      <Citacao texto={citacoes[indice].texto} autor={citacoes[indice].autor}/>
+
+     <button className="btn btn-primary mr-1" onClick={proximaCitacao}>Proxima citação</button>
     </div>
   )
 }
